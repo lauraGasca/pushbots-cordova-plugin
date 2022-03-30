@@ -26,4 +26,9 @@
     <clobbers target="PushbotsPlugin" />
   </js-module>
 
+  <!-- android -->
+  <platform name="android">
+    <hook type="after_prepare" src="scripts/apply-to-gradle.properties.js" />
+  </platform>
+
 </plugin>
