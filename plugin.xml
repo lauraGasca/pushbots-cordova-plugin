@@ -36,6 +36,14 @@
         <param name="android-package" value="com.pushbots.plugin.PushbotsPlugin"/>
       </feature>
     </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">   
+      <uses-permission android:name="android.permission.VIBRATE" />
+    </config-file>
+    
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <receiver android:name="com.pushbots.plugin.PushHandler" />
+    </config-file>
   
   </platform>
 
