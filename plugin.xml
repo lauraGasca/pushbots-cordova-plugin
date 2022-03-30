@@ -28,7 +28,60 @@
 
   <!-- android -->
   <platform name="android">
+
     <hook type="after_prepare" src="scripts/apply-to-gradle.properties.js" />
+
+    <config-file target="res/xml/config.xml" parent="/widget">
+      <feature name="PushbotsPlugin">
+        <param name="android-package" value="com.pushbots.plugin.PushbotsPlugin"/>
+      </feature>
+    </config-file>
+  
+  </platform>
+
+  <!-- iPhone -->
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="PushbotsPlugin">
+        <param name="ios-package" value="PushbotsPlugin" />
+      </feature>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="UIBackgroundModes">
+      <array>
+        <string>location</string>
+        <string>remote-notification</string>
+      </array>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+      <key>NSLocationWhenInUseUsageDescription</key>
+      <string>Send Geolocated push notifications</string>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+      <key>NSLocationWhenInUseUsageDescription</key>
+      <string>Send Geolocated push notifications</string>
+    </config-file>
+
+    <config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
+      <string>development</string>
+    </config-file>
+
+    <config-file parent="aps-environment" target="*/Entitlements-Release.plist">
+      <string>production</string>
+    </config-file>
+
+    <header-file src="src/ios/PushbotsPlugin.h" />
+    <source-file src="src/ios/PushbotsPlugin.m" />
+
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreTelephony.framework" />
+    <framework src="CoreLocation.framework" />
+
+    <framework src="src/ios/libs/Pushbots.framework" custom="true" />
+
   </platform>
 
 </plugin>
