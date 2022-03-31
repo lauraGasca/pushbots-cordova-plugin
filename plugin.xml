@@ -45,7 +45,7 @@
       <receiver android:name="com.pushbots.plugin.PushHandler" />
     </config-file>
 
-    <source-file src="src/android/com/pushbots/plugin/PushHandler.java" target-dir="src/com/pushbots/plugin" />
+    <source-file src="src/android/com/pushbots/plugin/Algo.java" target-dir="src/com/pushbots/plugin" />
 
     <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
   
