@@ -30,7 +30,7 @@ public class PushHandler extends BroadcastReceiver {
 		String action = intent.getAction();
 		Log.d(TAG, "action=" + action);
 		
-		if (action.equals(PBConstants.EVENT_MSG_OPEN)) {
+		/*if (action.equals(PBConstants.EVENT_MSG_OPEN)) {
 			
 			Bundle bundle = intent.getExtras().getBundle(PBConstants.EVENT_MSG_OPEN);
 		    String regId = PBPrefs.getToken(this.context);
@@ -100,6 +100,6 @@ public class PushHandler extends BroadcastReceiver {
             String ButtonId = intent.getStringExtra("button_id");
             Log.d("PB3",  "buttonid: "+  ButtonId + " Poll: " +intent.getBundleExtra(PBConstants.EVENT_POLL_OPEN).getString("poll"));
             //PushUtils.PollClicked(context, intent.getBundleExtra(PBConstants.EVENT_POLL_OPEN), ButtonId);
-        }
+        }*/
 	}
 }
