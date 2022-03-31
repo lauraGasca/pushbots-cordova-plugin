@@ -44,9 +44,6 @@
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <receiver android:name="com.pushbots.plugin.PushHandler" />
     </config-file>
-
-    <framework src="com.pushbots:pushbots-lib:3.3.4-c@aar" />
-    <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
   
   </platform>
 
