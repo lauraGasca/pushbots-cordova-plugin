@@ -1,6 +1,6 @@
 package com.pushbots.plugin;
 
-/*import android.content.BroadcastReceiver;
+import android.content.BroadcastReceiver;
 import com.pushbots.push.Pushbots;
 import com.pushbots.push.utils.PBConstants;
 import java.util.HashMap;
@@ -30,7 +30,7 @@ public class PushHandler extends BroadcastReceiver {
 		String action = intent.getAction();
 		Log.d(TAG, "action=" + action);
 		
-		/*if (action.equals(PBConstants.EVENT_MSG_OPEN)) {
+		if (action.equals(PBConstants.EVENT_MSG_OPEN)) {
 			
 			Bundle bundle = intent.getExtras().getBundle(PBConstants.EVENT_MSG_OPEN);
 		    String regId = PBPrefs.getToken(this.context);
@@ -102,4 +102,4 @@ public class PushHandler extends BroadcastReceiver {
             //PushUtils.PollClicked(context, intent.getBundleExtra(PBConstants.EVENT_POLL_OPEN), ButtonId);
         }
 	}
-}*/
+}
